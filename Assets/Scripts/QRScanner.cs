@@ -9,27 +9,27 @@ public class QRScanner : MonoBehaviour
     private WebCamTexture webcamTexture;
     private string QrCode = string.Empty;
     private bool scanningForQR;
-    
-    private void OnEnable()
+
+    private void Start()
     {
         var renderer = GetComponent<RawImage>();
         renderer.transform.localScale = new Vector3(-1, 1, -1);
         webcamTexture = new WebCamTexture(WebCamTexture.devices[1].name);
         renderer.texture = webcamTexture;
-        if(!scanningForQR) StartCoroutine(GetQRCode());
     }
-
+    
     private void Update()
     {
         if(!scanningForQR)
         {
-            QrCode = string.Empty;
             StartCoroutine(GetQRCode());
         }
     }
 
     IEnumerator GetQRCode()
     {
+        Debug.LogWarning("I am now scanning");
+        
         scanningForQR = true;
         IBarcodeReader barCodeReader = new BarcodeReader();
         webcamTexture.Play();
@@ -41,6 +41,7 @@ public class QRScanner : MonoBehaviour
             {
                 snap.SetPixels32(webcamTexture.GetPixels32());
                 var Result = barCodeReader.Decode(snap.GetRawTextureData(), webcamTexture.width, webcamTexture.height, RGBLuminanceSource.BitmapFormat.ARGB32);
+                
                 if (Result != null)
                 {
                     QrCode = Result.Text;
@@ -51,13 +52,15 @@ public class QRScanner : MonoBehaviour
                             scanningForQR = false;
                             webcamTexture.Stop();
                             ProgramController.instance.SwitchFromQR(true);
+                            ProgramController.instance.LoginUser(QrCode);
+                            QrCode = string.Empty;
                             break;
                         }
 
                     }
                 }
             }
-            catch (Exception ex) { Debug.LogWarning(ex.Message); }
+            catch (Exception ex) { Debug.LogWarning("Error in QRScanner: "+ ex.Message); }
             yield return null;
         }
     }

@@ -4,14 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+[CreateAssetMenu(menuName = "New Button", fileName = "New Button")]
 public class ButtonBase : ScriptableObject
 {
-    private string name;
-    private Button button;
-    private Image image;
-
-    private void OnEnable()
-    {
-        throw new NotImplementedException();
-    }
+    public string buttonName;
+    public string imagePath;
 }

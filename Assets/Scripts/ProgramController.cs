@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using Screen = UnityEngine.Device.Screen;
 
 public class ProgramController : MonoBehaviour
 {
     public static ProgramController instance;
-    public TextMeshProUGUI menuText;
-    public TextMeshProUGUI tabletScreen;
+    public TextMeshProUGUI monitorScreenText;
+    public TextMeshProUGUI tabletScreenText;
     public List<string> users = new List<string>() { "Test1", "Test2" };
     public GameObject QRMenu;
     public GameObject mainMenu;
@@ -23,6 +22,7 @@ public class ProgramController : MonoBehaviour
         QRMenu.SetActive(false);
         Display.onDisplaysUpdated += DisplayOnDisplaysUpdated;
         if(Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
+        
         QRMenu.SetActive(true);
     }
 
@@ -37,7 +37,7 @@ public class ProgramController : MonoBehaviour
             yield return null;
         }
         waitSecondMonitor = false;
-        tabletScreen.enabled = false;
+        tabletScreenText.enabled = false;
     }
 
     private void DisplayOnDisplaysUpdated()
@@ -54,13 +54,13 @@ public class ProgramController : MonoBehaviour
 
     private void DisplayErrorNoSecondMonitor()
     {
-        tabletScreen.enabled = true;
-        tabletScreen.text = "Error: No second screen connected";
+        tabletScreenText.enabled = true;
+        tabletScreenText.text = "Error: No second screen connected";
     }
 
     private void DisplayErrorNoUser()
     {
-        menuText.text = "Error: User not found";
+        monitorScreenText.text = "Error: User not found";
     }
 
     public void ShutDown()
@@ -85,5 +85,11 @@ public class ProgramController : MonoBehaviour
 
         DisplayErrorNoUser();
         return false;
+    }
+
+    public void LoginUser(string userName)
+    {
+        monitorScreenText.text = userName;
+        
     }
 }
