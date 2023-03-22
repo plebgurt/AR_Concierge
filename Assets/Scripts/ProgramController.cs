@@ -12,6 +12,8 @@ public class ProgramController : MonoBehaviour
     public GameObject QRMenu;
     public GameObject mainMenu;
     private bool waitSecondMonitor;
+    public Camera main;
+    public Camera monitor;
 
     // Start is called before the first frame update
     void Awake()
@@ -22,7 +24,8 @@ public class ProgramController : MonoBehaviour
         QRMenu.SetActive(false);
         Display.onDisplaysUpdated += DisplayOnDisplaysUpdated;
         if(Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
-        
+        main.targetDisplay = 0;
+        monitor.targetDisplay = 1;
         QRMenu.SetActive(true);
     }
 
@@ -89,7 +92,6 @@ public class ProgramController : MonoBehaviour
 
     public void LoginUser(string userName)
     {
-        monitorScreenText.text = userName;
-        
+        monitorScreenText.text = "Hej! " + userName;
     }
 }

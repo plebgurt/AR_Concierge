@@ -9,10 +9,11 @@ public class QRScanner : MonoBehaviour
     private WebCamTexture webcamTexture;
     private string QrCode = string.Empty;
     private bool scanningForQR;
+    private RawImage renderer;
 
     private void Start()
     {
-        var renderer = GetComponent<RawImage>();
+        renderer = GetComponent<RawImage>();
         renderer.transform.localScale = new Vector3(-1, 1, -1);
         webcamTexture = new WebCamTexture(WebCamTexture.devices[1].name);
         renderer.texture = webcamTexture;
@@ -22,6 +23,7 @@ public class QRScanner : MonoBehaviour
     {
         if(!scanningForQR)
         {
+            
             StartCoroutine(GetQRCode());
         }
     }
@@ -33,7 +35,6 @@ public class QRScanner : MonoBehaviour
         scanningForQR = true;
         IBarcodeReader barCodeReader = new BarcodeReader();
         webcamTexture.Play();
-        
         var snap = new Texture2D(webcamTexture.width, webcamTexture.height, TextureFormat.ARGB32, false);
         while (string.IsNullOrEmpty(QrCode))
         {
@@ -50,18 +51,23 @@ public class QRScanner : MonoBehaviour
                         if (ProgramController.instance.AttemptLogin(QrCode))
                         {
                             scanningForQR = false;
-                            webcamTexture.Stop();
-                            ProgramController.instance.SwitchFromQR(true);
                             ProgramController.instance.LoginUser(QrCode);
-                            QrCode = string.Empty;
+                            ProgramController.instance.SwitchFromQR(true);
                             break;
                         }
-
                     }
                 }
             }
             catch (Exception ex) { Debug.LogWarning("Error in QRScanner: "+ ex.Message); }
             yield return null;
         }
+
+        yield return null;
+    }
+
+    private void OnDisable()
+    {
+        QrCode = string.Empty;
+        if(webcamTexture != null) webcamTexture.Stop();
     }
 }
