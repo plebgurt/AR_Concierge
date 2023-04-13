@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class QRState : BaseState
 {
-    
+    internal MenuPairBase MenuPairBase;
     public override void EnterState(StateManager stateManager)
     { 
-        SetActive(true);
+        Debug.LogWarning(MenuPairBase.name + " has spawned");
+        MenuPairBase.SetMenuPairActive(true);
         EventHandler.EventHandlerSingleton.OnButtonPressedEvent += HandleEvent;
     }
 
     public override void HandleEvent(string eventName)
     {
-        
+        Debug.Log(eventName);
     }
 
     public override void ExitState(StateManager stateManager)
     {
         EventHandler.EventHandlerSingleton.OnButtonPressedEvent -= HandleEvent;
-        SetActive(false);
+        MenuPairBase.SetMenuPairActive(false);
     }
 }

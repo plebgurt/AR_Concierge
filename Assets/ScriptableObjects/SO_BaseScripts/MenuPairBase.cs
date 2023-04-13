@@ -11,10 +11,16 @@ public class MenuPairBase : ScriptableObject
     public GameObject tabletObject;
     public GameObject monitorObject;
 
-    public void SetActive(bool state)
+    internal GameObject SpawnedTablet;
+    internal GameObject SpawnedMonitor;
+    
+    public void SetMenuPairActive(bool state)
     {
-        tabletObject.SetActive(state);
-        monitorObject.SetActive(state);
+        SpawnedTablet = Instantiate(tabletObject);
+        SpawnedMonitor = Instantiate(monitorObject);
+        
+        SpawnedTablet.SetActive(state);
+        SpawnedMonitor.SetActive(state);
     }
 
     public string GetName()

@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class MainMenuState : BaseState
 {
-
+    internal MenuPairBase MenuPairBase;
     public override void EnterState(StateManager stateManager)
     {
-        SetActive(true);
+        Debug.LogWarning(MenuPairBase + " has spawned");
+        MenuPairBase.SetMenuPairActive(true);
+        MenuPairBase.SpawnedTablet.transform.SetParent(stateManager.tabletCanvas.transform);
+        MenuPairBase.SpawnedMonitor.transform.SetParent(stateManager.monitorCanvas.transform);
+        
         EventHandler.EventHandlerSingleton.OnButtonPressedEvent += HandleEvent;
     }
 
     public override void HandleEvent(string eventName)
     {
-        throw new System.NotImplementedException();
+        Debug.Log(eventName);
     }
 
     public override void ExitState(StateManager stateManager)
     {
         EventHandler.EventHandlerSingleton.OnButtonPressedEvent -= HandleEvent;
-        SetActive(false);
+        MenuPairBase.SetMenuPairActive(false);
     }
 }

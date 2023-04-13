@@ -11,7 +11,7 @@ public class QRScanner : MonoBehaviour
     private bool scanningForQR;
     private RawImage renderer;
 
-    private void Start()
+    private void OnEnable()
     {
         renderer = GetComponent<RawImage>();
         renderer.transform.localScale = new Vector3(-1, 1, -1);
