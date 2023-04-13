@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c8bab66e58a37429f4c118e7f21a55, type: 3}
-  m_Name: New Button
+  m_Script: {fileID: 11500000, guid: 94e4f72aacfb45b4f91fd0cf7ce1de98, type: 3}
+  m_Name: Sussan
   m_EditorClassIdentifier: 
-  buttonName: 
+  userName: Sussan
+  userid: 3
+  textOn: 0

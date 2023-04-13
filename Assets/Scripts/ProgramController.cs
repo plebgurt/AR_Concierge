@@ -1,39 +1,58 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
+[RequireComponent(typeof(StateManager))]
 public class ProgramController : MonoBehaviour
 {
     public static ProgramController instance;
-    public TextMeshProUGUI monitorScreenText;
+
+
     public TextMeshProUGUI tabletScreenText;
-    public List<string> users = new List<string>() { "Test1", "Test2" };
-    public GameObject QRMenu;
-    public GameObject mainMenu;
+    public List<PersonBase> registeredUsers = new List<PersonBase>();
     private bool waitSecondMonitor;
     public Camera main;
     public Camera monitor;
+
+    public GameObject monitorCanvas;
+    public GameObject tabletCanvas;
+
+    internal PersonBase currentUser;
+
+
+    [Header("Tablet UI")] public GameObject QRMenu;
+
+
+    public GameObject mainMenu;
+    [Header("Monitor UI")] public TextMeshProUGUI monitorScreenText;
+
+    [Header("SO Menu items")] [SerializeField]
+    private List<ScriptableObject> MenuItems = new List<ScriptableObject>();
+
+    [FormerlySerializedAs("_stateManager")] [SerializeField]
+    private StateManager stateManager;
 
     // Start is called before the first frame update
     void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
-        instance = this;
-        mainMenu.SetActive(false);
-        QRMenu.SetActive(false);
+        instance ??= this;
         Display.onDisplaysUpdated += DisplayOnDisplaysUpdated;
-        if(Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
+        if (Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
         main.targetDisplay = 0;
         monitor.targetDisplay = 1;
-        QRMenu.SetActive(true);
+        stateManager = StateManager.CurrentStateManager;
+        stateManager.StartStateManager();
     }
 
     IEnumerator AwaitSecondMonitor()
     {
         waitSecondMonitor = true;
-        DisplayErrorNoSecondMonitor();
-        
+        DisplayError("Error: No second source found");
         while (Display.displays.Length <= 1)
         {
             Debug.LogWarning("Amount of screens: " + Display.displays.Length);
@@ -47,23 +66,24 @@ public class ProgramController : MonoBehaviour
     {
         foreach (var t in Display.displays)
         {
-            if(t.active) continue;
+            if (t.active) continue;
             t.Activate();
         }
-        
-        
-        if(Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
+        if (Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
     }
-
-    private void DisplayErrorNoSecondMonitor()
+    
+    private void DisplayError(string error)
     {
-        tabletScreenText.enabled = true;
-        tabletScreenText.text = "Error: No second screen connected";
-    }
-
-    private void DisplayErrorNoUser()
-    {
-        monitorScreenText.text = "Error: User not found";
+        if (Display.displays.Length <= 1)
+        {
+            tabletScreenText.enabled = true;
+            tabletScreenText.text = error;
+        }
+        else
+        {
+            monitorScreenText.text = "Error: User not found";
+        }
+        
     }
 
     public void ShutDown()
@@ -73,25 +93,19 @@ public class ProgramController : MonoBehaviour
 
     public void LogOut()
     {
-        SwitchFromQR(false);
-    }
-
-    public void SwitchFromQR(bool state)
-    {
-        QRMenu.SetActive(!state);
-        mainMenu.SetActive(state);
+        stateManager.ChangeMenuState(stateManager.qrState);
     }
 
     public bool AttemptLogin(string scannedUser)
     {
-        if (users.Contains(scannedUser)) return true;
-
-        DisplayErrorNoUser();
+        foreach (var user in registeredUsers)
+        {
+            if (user.userid.Equals(int.Parse(scannedUser))) continue;
+            currentUser = user;
+            stateManager.ChangeMenuState(stateManager.mainMenuState);
+            return true;
+        }
+        DisplayError("Error: User not found");
         return false;
-    }
-
-    public void LoginUser(string userName)
-    {
-        monitorScreenText.text = "Hej! " + userName;
     }
 }

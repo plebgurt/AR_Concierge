@@ -23,7 +23,6 @@ public class QRScanner : MonoBehaviour
     {
         if(!scanningForQR)
         {
-            
             StartCoroutine(GetQRCode());
         }
     }
@@ -51,8 +50,6 @@ public class QRScanner : MonoBehaviour
                         if (ProgramController.instance.AttemptLogin(QrCode))
                         {
                             scanningForQR = false;
-                            ProgramController.instance.LoginUser(QrCode);
-                            ProgramController.instance.SwitchFromQR(true);
                             break;
                         }
                     }

@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94e4f72aacfb45b4f91fd0cf7ce1de98, type: 3}
-  m_Name: Max
+  m_Name: Sigge
   m_EditorClassIdentifier: 
-  name: Max
-  text: 0
+  userName: Sigge
+  userid: 2
+  textOn: 0

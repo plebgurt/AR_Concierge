@@ -9,4 +9,17 @@ public class ButtonBase : ScriptableObject
 {
     public string buttonName;
     public string imagePath;
+    public GameObject button;
+
+    public void GenerateButton()
+    {
+        
+    }
+    
+    
+    public void SendPressedNameEvent()
+    {
+        EventHandler.EventHandlerSingleton.OnButtonPressed(buttonName);
+    }
+    
 }
