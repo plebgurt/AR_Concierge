@@ -12,10 +12,7 @@ public class ButtonSpawner : MonoBehaviour
     {
         for (int i = 0; i < buttonSpawnPoints.Count; i++)
         {
-            var temp = buttonSO[i].GenerateButton();
-            temp.transform.SetParent(buttonSpawnPoints[i]);
-            Debug.LogWarning("Spawned: " + buttonSO[i].buttonName + " is active: " + temp.activeInHierarchy);
-            
+            var temp = buttonSO[i].GenerateButton(buttonSpawnPoints[i]);
         }
     }
 }

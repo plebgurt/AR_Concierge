@@ -8,10 +8,8 @@ public class MainMenuState : BaseState
     public override void EnterState(StateManager stateManager)
     {
         Debug.LogWarning(MenuPairBase + " has spawned");
+        MenuPairBase.SpawnElements(stateManager.tabletCanvas.transform, stateManager.monitorCanvas.transform);
         MenuPairBase.SetMenuPairActive(true);
-        MenuPairBase.SpawnedTablet.transform.SetParent(stateManager.tabletCanvas.transform);
-        MenuPairBase.SpawnedMonitor.transform.SetParent(stateManager.monitorCanvas.transform);
-        
         EventHandler.EventHandlerSingleton.OnButtonPressedEvent += HandleEvent;
     }
 

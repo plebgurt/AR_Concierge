@@ -15,9 +15,9 @@ public class ButtonBase : ScriptableObject
     private TextMeshProUGUI textMeshProUGUI;
     private GameObject SpawnedButton;
     
-    public GameObject GenerateButton()
+    public GameObject GenerateButton(Transform parent)
     {
-        SpawnedButton = Instantiate(buttonGO);
+        SpawnedButton = Instantiate(buttonGO, parent);
         button = SpawnedButton.GetComponent<Button>();
         ColorBlock cb = button.colors;
         cb.normalColor = Color.magenta;

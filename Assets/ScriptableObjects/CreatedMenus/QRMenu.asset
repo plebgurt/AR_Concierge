@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: QRMenu
   m_EditorClassIdentifier: 
   menuName: QRMenu
-  tabletObject: {fileID: 4242691195372703363, guid: 51f47987c4205e943bafbb04b0fdfb70,
+  tabletObject: {fileID: 1833817103370653439, guid: 061c94b40c7fde74d98a8600fcbe7b7d,
     type: 3}
-  monitorObject: {fileID: 482926327849709212, guid: ee1890ba5b144bd40bd94f5587ee7908,
+  monitorObject: {fileID: 5293527117967030930, guid: 3db6348dbcfbf9b4283dfdab23371042,
     type: 3}

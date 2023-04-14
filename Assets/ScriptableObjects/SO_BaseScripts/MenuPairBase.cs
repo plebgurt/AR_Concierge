@@ -13,12 +13,15 @@ public class MenuPairBase : ScriptableObject
 
     internal GameObject SpawnedTablet;
     internal GameObject SpawnedMonitor;
+
+    public void SpawnElements(Transform tabletCanvas, Transform monitorCanvas)
+    {
+        SpawnedTablet = Instantiate(tabletObject, tabletCanvas);
+        SpawnedMonitor = Instantiate(monitorObject, monitorCanvas);
+    }
     
     public void SetMenuPairActive(bool state)
     {
-        SpawnedTablet = Instantiate(tabletObject);
-        SpawnedMonitor = Instantiate(monitorObject);
-        
         SpawnedTablet.SetActive(state);
         SpawnedMonitor.SetActive(state);
     }
