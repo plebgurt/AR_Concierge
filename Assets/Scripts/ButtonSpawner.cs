@@ -7,12 +7,14 @@ public class ButtonSpawner : MonoBehaviour
 {
     [SerializeField] private List<Transform> buttonSpawnPoints;
     [SerializeField] private List<ButtonBase> buttonSO;
+    private List<string> buttonNames = new List<string>();
 
     private void OnEnable()
     {
         for (int i = 0; i < buttonSpawnPoints.Count; i++)
         {
-            var temp = buttonSO[i].GenerateButton(buttonSpawnPoints[i]);
+            buttonSO[i].GenerateButton(buttonSpawnPoints[i]);
+            
         }
     }
 }

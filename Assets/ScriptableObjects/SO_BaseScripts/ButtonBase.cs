@@ -15,22 +15,17 @@ public class ButtonBase : ScriptableObject
     private TextMeshProUGUI textMeshProUGUI;
     private GameObject SpawnedButton;
     
-    public GameObject GenerateButton(Transform parent)
+    public void GenerateButton(Transform parent)
     {
         SpawnedButton = Instantiate(buttonGO, parent);
         button = SpawnedButton.GetComponent<Button>();
-        ColorBlock cb = button.colors;
-        cb.normalColor = Color.magenta;
-        button.colors = cb;
         textMeshProUGUI = button.GetComponentInChildren<TextMeshProUGUI>();
         textMeshProUGUI.text = buttonName;
-        button.onClick.AddListener(SendPressedNameEvent);
-        return SpawnedButton;
+        button.onClick.AddListener(SendPressedNameEvent); 
     }
     
     public void SendPressedNameEvent()
     {
-        Debug.Log("Sending: " + buttonName);
         EventHandler.EventHandlerSingleton.OnButtonPressed(buttonName);
     }
     

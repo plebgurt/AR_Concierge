@@ -15,30 +15,28 @@ public class ProgramController : MonoBehaviour
     private bool waitSecondMonitor;
     public Camera main;
     public Camera monitor;
-    internal PersonBase currentUser;
+    [SerializeField] internal PersonBase currentUser;
     public StateManager stateManager;
     
     
     [Header("Error text")] 
     public TextMeshProUGUI monitorScreenText;
     public TextMeshProUGUI tabletScreenText;
-   
 
+    [Header("Debug")] 
+    public bool DebugUnity;
     // Start is called before the first frame update
     void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
         instance ??= this;
-        //Display.onDisplaysUpdated += DisplayOnDisplaysUpdated;
-        //if (Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
+        if (DebugUnity) return;
+        Display.onDisplaysUpdated += DisplayOnDisplaysUpdated;
+        if (Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
         main.targetDisplay = 0;
-        //monitor.targetDisplay = 1;
+        monitor.targetDisplay = 1;
         
     }
-
-   
-        
-    
 
     IEnumerator AwaitSecondMonitor()
     {

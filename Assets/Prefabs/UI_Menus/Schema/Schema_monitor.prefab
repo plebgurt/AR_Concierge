@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 2335632137876542538}
   - component: {fileID: 5310803361414092278}
   m_Layer: 5
-  m_Name: Schema_vecka
+  m_Name: Vecka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 6335443026164402044}
   - component: {fileID: 823521420161419804}
   m_Layer: 5
-  m_Name: Schema_dag
+  m_Name: Dag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,8 +7,9 @@ public class QRState : BaseState
     internal MenuPairBase MenuPairBase;
     public override void EnterState(StateManager stateManager)
     { 
-        MenuPairBase.SetMenuPairActive(true);
         EventHandler.EventHandlerSingleton.OnButtonPressedEvent += HandleEvent;
+        MenuPairBase.SpawnElements(stateManager.tabletCanvas.transform, stateManager.monitorCanvas.transform);
+        MenuPairBase.SetMenuPairActive(true);
     }
 
     public override void HandleEvent(string eventName)

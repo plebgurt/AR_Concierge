@@ -23,7 +23,6 @@ public class StateManager : MonoBehaviour
     void Awake()
     {
         CurrentStateManager ??= this;
-        
         mainMenuState.MenuPairBase = Instantiate(menuPairBases[0]);
         qrState.MenuPairBase = Instantiate(menuPairBases[1]);
         schemaState.MenuPairBase = Instantiate(menuPairBases[2]);
@@ -39,7 +38,6 @@ public class StateManager : MonoBehaviour
 
     internal void ChangeMenuState(BaseState newBaseState)
     {
-        Debug.Log("Changed event");
         currentState.ExitState(CurrentStateManager);
         currentState = newBaseState;
         newBaseState.EnterState(CurrentStateManager);
@@ -48,15 +46,10 @@ public class StateManager : MonoBehaviour
 
     internal void HandleEventFromMenu(string eventName)
     {
-        Debug.Log("Received: " + eventName);
-        
         foreach (var state in allBaseStates)
         {
-            Debug.Log($"Checking {eventName} with {state.GetNameMenuPair()}");
-
             if (state.GetNameMenuPair().Equals(eventName))
             {
-                Debug.Log("Changed event");   
                 ChangeMenuState(state);
                 return;
             }
