@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userName: Gustav
   userid: 3
-  textOn: 0
+  textOn: 1

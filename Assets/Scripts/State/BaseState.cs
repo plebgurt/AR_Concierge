@@ -4,10 +4,12 @@ using UnityEngine;
 
 public abstract class BaseState
 {
-    
+
     public abstract void EnterState(StateManager stateManager);
 
     public abstract void HandleEvent(string eventName);
 
     public abstract void ExitState(StateManager stateManager);
+    
+    public abstract string GetNameMenuPair();
 }

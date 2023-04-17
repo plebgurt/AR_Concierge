@@ -11,17 +11,18 @@ using Task = System.Threading.Tasks.Task;
 public class ProgramController : MonoBehaviour
 {
     public static ProgramController instance;
-    public TextMeshProUGUI tabletScreenText;
     public StoreUsersBase usersBase;
     private bool waitSecondMonitor;
     public Camera main;
     public Camera monitor;
     internal PersonBase currentUser;
-
-    [Header("Monitor UI")] 
-    public TextMeshProUGUI monitorScreenText;
-
     public StateManager stateManager;
+    
+    
+    [Header("Error text")] 
+    public TextMeshProUGUI monitorScreenText;
+    public TextMeshProUGUI tabletScreenText;
+   
 
     // Start is called before the first frame update
     void Awake()

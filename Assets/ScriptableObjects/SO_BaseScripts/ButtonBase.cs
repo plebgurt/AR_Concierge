@@ -30,6 +30,7 @@ public class ButtonBase : ScriptableObject
     
     public void SendPressedNameEvent()
     {
+        Debug.Log("Sending: " + buttonName);
         EventHandler.EventHandlerSingleton.OnButtonPressed(buttonName);
     }
     

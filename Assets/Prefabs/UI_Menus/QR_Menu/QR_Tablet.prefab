@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1833817103370653424}
   - component: {fileID: 1833817103370653425}
   m_Layer: 5
-  m_Name: QR Menu
+  m_Name: QR_Tablet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
