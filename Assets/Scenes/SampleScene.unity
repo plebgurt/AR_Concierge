@@ -450,7 +450,7 @@ MonoBehaviour:
   loggedInText: {fileID: 0}
   monitorScreenText: {fileID: 1655065775}
   tabletScreenText: {fileID: 1880275399}
-  DebugUnity: 0
+  DebugUnity: 1
 --- !u!4 &542289395
 Transform:
   m_ObjectHideFlags: 0
