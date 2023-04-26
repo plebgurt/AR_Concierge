@@ -25,10 +25,15 @@ public class MenuPairBase : ScriptableObject
     {
         SpawnedTablet.SetActive(state);
         SpawnedMonitor.SetActive(state);
-        if (state)
-        {
-            SpawnedMonitor.transform.GetChild(0).gameObject.SetActive(state);
-        }
+        
+    }
+
+    public void EnableFirstChild()
+    {
+        
+            if(SpawnedMonitor.transform.childCount <= 0) return;
+            SpawnedMonitor.transform.GetChild(0).gameObject.SetActive(true);
+        
     }
 
     public string GetName()

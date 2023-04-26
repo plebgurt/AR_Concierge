@@ -41,7 +41,7 @@ public class StateManager : MonoBehaviour
         allBaseStates.Add(checkedInState);
         allBaseStates.Add(aktivitetState);
         
-        currentState = mainMenuState;
+        currentState = ProgramController.instance.DebugUnity ? mainMenuState : qrState;
         currentState.EnterState(CurrentStateManager);
     }
 

@@ -10,8 +10,6 @@ public class MainMenuState : BaseState
         EventHandler.EventHandlerSingleton.OnButtonPressedEvent += HandleEvent;
         MenuPairBase.SpawnElements(stateManager.tabletCanvas.transform, stateManager.monitorCanvas.transform);
         MenuPairBase.SetMenuPairActive(true);
-        
-
     }
 
     public override void HandleEvent(string eventName)

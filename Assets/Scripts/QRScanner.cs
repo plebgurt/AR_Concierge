@@ -22,7 +22,7 @@ public class QRScanner : MonoBehaviour
         
         renderer = GetComponent<RawImage>();
         renderer.transform.localScale = new Vector3(-1, 1, -1);
-        webcamTexture = new WebCamTexture(WebCamTexture.devices[0].name);
+        webcamTexture = new WebCamTexture(WebCamTexture.devices[1].name);
         renderer.texture = webcamTexture;
     }
     

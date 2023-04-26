@@ -12,6 +12,7 @@ public class ProgramController : MonoBehaviour
 {
     public static ProgramController instance;
     public StoreUsersBase usersBase;
+    private StoreUsersBase spawnedUsers;
     private bool waitSecondMonitor;
     public Camera main;
     public Camera monitor;
@@ -29,13 +30,19 @@ public class ProgramController : MonoBehaviour
     void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
+        spawnedUsers = Instantiate(usersBase);
         instance ??= this;
-        if (DebugUnity) return;
+        if (DebugUnity)
+        {
+            currentUser = spawnedUsers.registeredUsers[1];
+            return;
+        }
         Display.onDisplaysUpdated += DisplayOnDisplaysUpdated;
         if (Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
         main.targetDisplay = 0;
         monitor.targetDisplay = 1;
         
+
     }
 
     IEnumerator AwaitSecondMonitor()
@@ -70,7 +77,7 @@ public class ProgramController : MonoBehaviour
         }
         else
         {
-            monitorScreenText.text = "Error: User not found";
+            monitorScreenText.text = "Error: Monitor not found";
         }
         
     }
@@ -88,7 +95,7 @@ public class ProgramController : MonoBehaviour
     public bool AttemptLogin(string scannedUser)
     {
         var userID = int.Parse(scannedUser);
-        foreach (var user in usersBase.registeredUsers)
+        foreach (var user in spawnedUsers.registeredUsers)
         {
             if (!user.userid.Equals(userID)) continue;
             currentUser = user;

@@ -13,6 +13,7 @@ public class ButtonSpawner : MonoBehaviour
     {
         for (int i = 0; i < buttonSpawnPoints.Count; i++)
         {
+            if(buttonSpawnPoints[i].transform.childCount > 0) continue;
             buttonSO[i].GenerateButton(buttonSpawnPoints[i]);
             
         }
