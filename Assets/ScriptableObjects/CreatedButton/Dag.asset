@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Dag
   m_EditorClassIdentifier: 
   buttonName: Dag
-  imagePath: TestDay
+  imagePath: Dag
   buttonGO: {fileID: 6250112903617788812, guid: de23241f9c44a97429219ebc66aa1295,
     type: 3}
