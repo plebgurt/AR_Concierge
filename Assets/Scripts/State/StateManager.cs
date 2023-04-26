@@ -12,6 +12,9 @@ public class StateManager : MonoBehaviour
     internal MainMenuState mainMenuState = new MainMenuState();
     internal QRState qrState = new QRState();
     internal SchemaState schemaState = new SchemaState();
+    internal LunchState lunchState = new LunchState();
+    internal CheckedInState checkedInState = new CheckedInState();
+    internal AktivitetState aktivitetState = new AktivitetState();
     
     internal List<BaseState> enterOrder = new List<BaseState>();
     internal List<BaseState> allBaseStates = new List<BaseState>();
@@ -26,10 +29,17 @@ public class StateManager : MonoBehaviour
         mainMenuState.MenuPairBase = Instantiate(menuPairBases[0]);
         qrState.MenuPairBase = Instantiate(menuPairBases[1]);
         schemaState.MenuPairBase = Instantiate(menuPairBases[2]);
+        lunchState.MenuPairBase = Instantiate(menuPairBases[3]);
+        checkedInState.MenuPairBase = Instantiate(menuPairBases[4]);
+        aktivitetState.MenuPairBase = Instantiate(menuPairBases[5]);
+        
         
         allBaseStates.Add(mainMenuState);
         allBaseStates.Add(qrState);
         allBaseStates.Add(schemaState);
+        allBaseStates.Add(lunchState);
+        allBaseStates.Add(checkedInState);
+        allBaseStates.Add(aktivitetState);
         
         currentState = mainMenuState;
         currentState.EnterState(CurrentStateManager);
@@ -53,6 +63,11 @@ public class StateManager : MonoBehaviour
                 ChangeMenuState(state);
                 return;
             }
+        }
+
+        if (eventName.Equals("Quit"))
+        {
+            ChangeMenuState(qrState);
         }
     }
 }

@@ -13,9 +13,16 @@ public class QRScanner : MonoBehaviour
 
     private void OnEnable()
     {
+        WebCamDevice[] devices = WebCamTexture.devices;
+        for (int i = 0; i < devices.Length; i++)
+        { 
+            Debug.Log(devices[i].name);
+        }
+
+        
         renderer = GetComponent<RawImage>();
         renderer.transform.localScale = new Vector3(-1, 1, -1);
-        webcamTexture = new WebCamTexture(WebCamTexture.devices[1].name);
+        webcamTexture = new WebCamTexture(WebCamTexture.devices[0].name);
         renderer.texture = webcamTexture;
     }
     

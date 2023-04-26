@@ -83,31 +83,31 @@
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 3979,
+            "processId": 10852,
             "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 4235,
+            "processId": 11500,
             "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 4414,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.unity3d.mobileremote",
-            "processId": 19652,
+            "name": "com.sec.android.app.launcher",
+            "processId": 2137,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 22441,
+            "processId": 12470,
+            "exited": true
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 12839,
             "exited": true
         }
     ],

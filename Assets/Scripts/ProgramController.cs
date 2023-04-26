@@ -90,7 +90,7 @@ public class ProgramController : MonoBehaviour
         var userID = int.Parse(scannedUser);
         foreach (var user in usersBase.registeredUsers)
         {
-            if (user.userid.Equals(userID)) continue;
+            if (!user.userid.Equals(userID)) continue;
             currentUser = user;
             stateManager.ChangeMenuState(stateManager.mainMenuState);
             return true;

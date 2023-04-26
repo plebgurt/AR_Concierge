@@ -13,6 +13,7 @@ public class ButtonBase : ScriptableObject
     public GameObject buttonGO;
     private Button button;
     private TextMeshProUGUI textMeshProUGUI;
+    private Image buttonImage;
     private GameObject SpawnedButton;
     
     public void GenerateButton(Transform parent)
@@ -20,7 +21,22 @@ public class ButtonBase : ScriptableObject
         SpawnedButton = Instantiate(buttonGO, parent);
         button = SpawnedButton.GetComponent<Button>();
         textMeshProUGUI = button.GetComponentInChildren<TextMeshProUGUI>();
-        textMeshProUGUI.text = buttonName;
+        buttonImage = button.transform.Find("ButtonImage").GetComponent<Image>();
+        if (ProgramController.instance.currentUser.textOn)
+        {
+            buttonImage.enabled = false;
+            textMeshProUGUI.text = buttonName;
+        }
+        else
+        {
+            textMeshProUGUI.enabled = false;
+            
+            var someOtherSprite = Resources.Load<Sprite>(imagePath);
+            Debug.Log(someOtherSprite == null);
+            buttonImage.sprite = someOtherSprite;
+
+        }
+        
         button.onClick.AddListener(SendPressedNameEvent); 
     }
     

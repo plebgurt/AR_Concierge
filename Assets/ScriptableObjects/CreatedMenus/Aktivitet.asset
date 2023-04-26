@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c8bab66e58a37429f4c118e7f21a55, type: 3}
-  m_Name: Dag
+  m_Script: {fileID: 11500000, guid: 5e0c144a6ddce464f93d5bd9b0cb653f, type: 3}
+  m_Name: Aktivitet
   m_EditorClassIdentifier: 
-  buttonName: Dag
-  imagePath: TestDay
-  buttonGO: {fileID: 6250112903617788812, guid: de23241f9c44a97429219ebc66aa1295,
-    type: 3}
+  menuName: 
+  tabletObject: {fileID: 0}
+  monitorObject: {fileID: 0}
+  children: []
