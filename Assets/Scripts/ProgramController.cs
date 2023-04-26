@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Task = System.Threading.Tasks.Task;
 
 [RequireComponent(typeof(StateManager))]
@@ -18,6 +19,9 @@ public class ProgramController : MonoBehaviour
     public Camera monitor;
     [SerializeField] internal PersonBase currentUser;
     public StateManager stateManager;
+    [SerializeField] private AudioClip loggedInSound;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField]private Text loggedInText;
     
     
     [Header("Error text")] 
@@ -100,6 +104,7 @@ public class ProgramController : MonoBehaviour
             if (!user.userid.Equals(userID)) continue;
             currentUser = user;
             stateManager.ChangeMenuState(stateManager.mainMenuState);
+            audioSource.PlayOneShot(loggedInSound);
             return true;
         }
         DisplayError("Error! User not found with ID: " + userID);
