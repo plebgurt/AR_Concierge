@@ -12,7 +12,7 @@ public class ShowUsernameMainMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        textMeshProUGUI.text = $"Hej {ProgramController.instance.currentUser.userName}!";
+        textMeshProUGUI.text = $"Välkommen {ProgramController.instance.currentUser.userName}!";
         profileImage.sprite = Resources.Load<Sprite>(ProgramController.instance.currentUser.profileImagePath);
     }
 }

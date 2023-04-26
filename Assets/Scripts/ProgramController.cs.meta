@@ -3,7 +3,16 @@ guid: 3885aaa872a6a6d4092d114755d60a1f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - usersBase: {instanceID: 0}
+  - main: {instanceID: 0}
+  - monitor: {instanceID: 0}
+  - currentUser: {instanceID: 0}
+  - stateManager: {instanceID: 0}
+  - loggedInSound: {fileID: 8300000, guid: c70738b201384464eb0a493b9ec45008, type: 3}
+  - audioSource: {instanceID: 0}
+  - monitorScreenText: {instanceID: 0}
+  - tabletScreenText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
