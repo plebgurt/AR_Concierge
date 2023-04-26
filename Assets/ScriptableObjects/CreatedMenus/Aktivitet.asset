@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0c144a6ddce464f93d5bd9b0cb653f, type: 3}
   m_Name: Aktivitet
   m_EditorClassIdentifier: 
-  menuName: 
-  tabletObject: {fileID: 0}
-  monitorObject: {fileID: 0}
+  menuName: Aktivitet
+  tabletObject: {fileID: 661997179455904116, guid: df28e0ecbe70b6b47838041f09f8b679,
+    type: 3}
+  monitorObject: {fileID: 661997179455904116, guid: d7fc7269f8bb83f43950a8a1e97dbfe2,
+    type: 3}
   children: []

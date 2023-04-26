@@ -418,7 +418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542289393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -453,6 +453,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb5f837191dac344cb1d8b12c5f9adf6, type: 2}
   - {fileID: 11400000, guid: c175eb18570bf304197a9a154ce41b0b, type: 2}
   - {fileID: 11400000, guid: d458d3cc0f7fd7a478057c965b35d6f0, type: 2}
+  - {fileID: 11400000, guid: eefe013efec56d84eb6c2f3d56ef03f4, type: 2}
+  - {fileID: 11400000, guid: 17b5ada58cf543943935b3c79fb40787, type: 2}
+  - {fileID: 11400000, guid: 6827c680d484ca14a9f5c58793b9b01f, type: 2}
   tabletCanvas: {fileID: 387385621}
   monitorCanvas: {fileID: 1160223497}
 --- !u!1 &659876174
