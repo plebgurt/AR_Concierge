@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "193.10.9.122:5555",
         "name": "com.DefaultCompany.UnityQRScanner",
-        "processId": 25459,
+        "processId": 28708,
         "exited": false
     },
     "m_SelectedPriority": 3,
@@ -51,6 +51,12 @@
             "exited": false
         },
         {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 21530,
+            "exited": false
+        },
+        {
             "deviceId": "193.10.9.125:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
             "processId": 18003,
@@ -83,115 +89,145 @@
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 10852,
+            "processId": 26558,
             "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 11500,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.sec.android.app.launcher",
-            "processId": 2137,
-            "exited": false
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 12470,
+            "processId": 22547,
             "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 12839,
+            "processId": 22927,
             "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 18605,
+            "processId": 23533,
+            "exited": true
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.unity3d.mobileremote",
+            "processId": 21490,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 18933,
+            "processId": 23667,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 19438,
+            "processId": 23981,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 19908,
+            "processId": 24302,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 20086,
+            "processId": 24510,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 20550,
+            "processId": 24834,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 21140,
+            "processId": 25189,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 21874,
+            "processId": 25482,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 22224,
+            "processId": 25685,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 22854,
+            "processId": 25846,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 23495,
+            "processId": 26050,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 23967,
+            "processId": 26415,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 24504,
+            "processId": 26733,
             "exited": false
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 25459,
+            "processId": 26891,
+            "exited": false
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 27203,
+            "exited": false
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 27687,
+            "exited": false
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 28016,
+            "exited": false
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 28204,
+            "exited": false
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 28460,
+            "exited": false
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 28708,
             "exited": false
         }
     ],
