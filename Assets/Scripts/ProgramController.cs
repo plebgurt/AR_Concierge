@@ -21,7 +21,7 @@ public class ProgramController : MonoBehaviour
     public StateManager stateManager;
     [SerializeField] private AudioClip loggedInSound;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField]private Text loggedInText;
+    [SerializeField] private Text loggedInText;
     
     
     [Header("Error text")] 
@@ -41,11 +41,12 @@ public class ProgramController : MonoBehaviour
             currentUser = spawnedUsers.registeredUsers[1];
             return;
         }
+     
         Display.onDisplaysUpdated += DisplayOnDisplaysUpdated;
         if (Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
         main.targetDisplay = 0;
         monitor.targetDisplay = 1;
-        
+     
 
     }
 
