@@ -15,5 +15,4 @@ MonoBehaviour:
   profileImagePath: 
   userName: Gustav
   userid: 3
-  textOn: 1
-  loggedIn: 0
+  knappInfo: 0

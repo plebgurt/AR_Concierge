@@ -15,5 +15,4 @@ MonoBehaviour:
   profileImagePath: 
   userName: Susan
   userid: 0
-  textOn: 0
-  loggedIn: 0
+  knappInfo: 1

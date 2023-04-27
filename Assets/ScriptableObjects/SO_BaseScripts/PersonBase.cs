@@ -11,8 +11,13 @@ public class PersonBase : ScriptableObject
     public string profileImagePath;
     public string userName;
     public int userid;
-    public bool textOn;
-    public bool loggedIn;
 
+    public KnappInfo knappInfo;
+    public enum KnappInfo
+    {
+        Text,
+        Bild,
+        TextOchBild
+    }
 
 }
