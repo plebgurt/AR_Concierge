@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Random = System.Random;
 using Task = System.Threading.Tasks.Task;
 
 [RequireComponent(typeof(StateManager))]
@@ -38,7 +39,9 @@ public class ProgramController : MonoBehaviour
         instance ??= this;
         if (DebugUnity)
         {
-            currentUser = spawnedUsers.registeredUsers[1];
+            var random = new Random();
+            var user = random.Next(4);
+            currentUser = spawnedUsers.registeredUsers[user];
             return;
         }
      

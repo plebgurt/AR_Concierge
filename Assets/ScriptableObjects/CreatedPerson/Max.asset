@@ -15,5 +15,4 @@ MonoBehaviour:
   profileImagePath: TestDay
   userName: Max
   userid: 1
-  textOn: 0
-  loggedIn: 0
+  knappInfo: 2
