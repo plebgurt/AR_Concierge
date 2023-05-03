@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e4f72aacfb45b4f91fd0cf7ce1de98, type: 3}
   m_Name: Sussan
   m_EditorClassIdentifier: 
-  profileImagePath: 
+  profileImagePath: profilbild
   userName: Susan
   userid: 0
   knappInfo: 1
