@@ -55,8 +55,8 @@ MonoBehaviour:
   - {fileID: 7596177004161850650}
   - {fileID: 7388023261283845208}
   buttonSO:
-  - {fileID: 11400000, guid: f682a77957913664d9938cafc20ea92f, type: 2}
-  - {fileID: 11400000, guid: f682a77957913664d9938cafc20ea92f, type: 2}
+  - {fileID: 11400000, guid: 74fc152606faa504d875fb0eb09e9de9, type: 2}
+  - {fileID: 11400000, guid: 1a06b56c60543814b880111cfb1d1b38, type: 2}
   - {fileID: 11400000, guid: f682a77957913664d9938cafc20ea92f, type: 2}
 --- !u!1 &3718648977821982164
 GameObject:
