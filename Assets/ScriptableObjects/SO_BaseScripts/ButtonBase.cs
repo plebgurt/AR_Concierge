@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +22,7 @@ public class ButtonBase : ScriptableObject
 
     public void GenerateButton(Transform parent)
     {
-        SpawnedButton = Instantiate(buttonGO, parent);
+        SpawnedButton = Instantiate(buttonGO, parent, false);
         button = SpawnedButton.GetComponent<Button>();
         textMeshProUGUI = button.GetComponentInChildren<TextMeshProUGUI>();
         buttonImage = button.transform.Find("ButtonImage").GetComponent<Image>();
@@ -51,12 +52,14 @@ public class ButtonBase : ScriptableObject
                 break;
         }
         
-        
+        Debug.Log($"Button name: {button.name}, button pos: {SpawnedButton.transform.position}, ");
         button.onClick.AddListener(SendPressedNameEvent); 
+        
     }
     
     public void SendPressedNameEvent()
     {
+        Debug.LogWarning($"Sending: {buttonName} event.");
         EventHandler.EventHandlerSingleton.OnButtonPressed(buttonName);
     }
     

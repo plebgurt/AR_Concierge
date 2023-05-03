@@ -40,6 +40,11 @@ public class StateManager : MonoBehaviour
         allBaseStates.Add(lunchState);
         allBaseStates.Add(checkedInState);
         allBaseStates.Add(aktivitetState);
+
+        tabletCanvas.targetDisplay = 0;
+        monitorCanvas.targetDisplay = 1;
+        tabletCanvas.worldCamera = ProgramController.instance.main;
+        monitorCanvas.worldCamera = ProgramController.instance.monitor;
         
         currentState = ProgramController.instance.DebugUnity ? mainMenuState : qrState;
         currentState.EnterState(CurrentStateManager);
@@ -51,6 +56,7 @@ public class StateManager : MonoBehaviour
         currentState.ExitState(CurrentStateManager);
         currentState = newBaseState;
         newBaseState.EnterState(CurrentStateManager);
+        Canvas.ForceUpdateCanvases();
         
     }
 

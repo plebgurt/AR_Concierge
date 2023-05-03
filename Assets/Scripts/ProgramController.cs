@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = System.Random;
@@ -49,7 +50,7 @@ public class ProgramController : MonoBehaviour
         if (Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
         main.targetDisplay = 0;
         monitor.targetDisplay = 1;
-     
+        
 
     }
 
@@ -114,4 +115,48 @@ public class ProgramController : MonoBehaviour
         DisplayError("Error! User not found with ID: " + userID);
         return false;
     }
+    
+    void Update()
+    {
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+
+            // Check for 3D objects
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                Debug.Log("Touched 3D Object: " + hit.collider.gameObject.name);
+                return;
+            }
+
+            // Check for UI elements
+            GraphicRaycaster graphicRaycaster = GetComponentInParent<GraphicRaycaster>();
+            if (graphicRaycaster == null)
+            {
+                Debug.LogError("No GraphicRaycaster component found in the parent GameObject.");
+                return;
+            }
+
+            PointerEventData eventData = new PointerEventData(EventSystem.current);
+            eventData.position = Input.GetTouch(0).position;
+
+            // Raycast against all graphics in the canvas
+            List<RaycastResult> results = new List<RaycastResult>();
+            graphicRaycaster.Raycast(eventData, results);
+
+            // Find the first UI element that intersects with the ray
+            foreach (RaycastResult result in results)
+            {
+                if (result.gameObject != null)
+                {
+                    Debug.Log("Touched UI Element: " + result.gameObject.name);
+                    return;
+                }
+            }
+
+            Debug.Log("Touch detected, but no object or UI element found.");
+        }
+    }
+
 }

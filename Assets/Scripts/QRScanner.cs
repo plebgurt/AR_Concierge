@@ -13,13 +13,13 @@ public class QRScanner : MonoBehaviour
     private bool scanningForQR;
     private RawImage scannerArea;
     [SerializeField] private RawImage backGround;
-    private Texture2D croppedText;
+    private Texture2D scanZoneTexture2D;
 
 
     private void OnEnable()
     {
-        scannerArea = GetComponent<RawImage>();
-        scannerArea.transform.localScale = new Vector3(-1, 1, -1);
+        //scannerArea = GetComponent<RawImage>();
+        //scannerArea.transform.localScale = new Vector3(-1, 1, -1);
         backGround.transform.localScale = new Vector3(-1, 1, -1);
         webCamTextureBackGround = new WebCamTexture(WebCamTexture.devices[1].name, 2560, 1600);
         backGround.texture = webCamTextureBackGround;
@@ -40,26 +40,27 @@ public class QRScanner : MonoBehaviour
         webCamTextureBackGround.Play();
         var camwidth = webCamTextureBackGround.width;
         var camheight = webCamTextureBackGround.height;
+        
 
         while (string.IsNullOrEmpty(QrCode))
         {
-            if (croppedText != null)
+            if (scanZoneTexture2D != null)
             {
-                Destroy(croppedText);
-                croppedText = null;
+                Destroy(scanZoneTexture2D);
+                scanZoneTexture2D = null;
             }
             
-            croppedText = new Texture2D(512, 512);
-            Color[] pix = webCamTextureBackGround.GetPixels(camwidth / 2 - 256, camheight / 2 - 256, croppedText.width, croppedText.height);
-            croppedText.SetPixels(pix);
-            croppedText.Apply();
-            scannerArea.texture = croppedText;
-            var snap = new Texture2D(croppedText.width, croppedText.height, TextureFormat.ARGB32, false);
+            scanZoneTexture2D = new Texture2D(512, 512);
+            Color[] pix = webCamTextureBackGround.GetPixels(camwidth / 2 - scanZoneTexture2D.width / 2, camheight / 2 - scanZoneTexture2D.height / 2, scanZoneTexture2D.width, scanZoneTexture2D.height);
+            scanZoneTexture2D.SetPixels(pix);
+            scanZoneTexture2D.Apply();
+            //scannerArea.texture = croppedText;
+            var snap = new Texture2D(scanZoneTexture2D.width, scanZoneTexture2D.height, TextureFormat.ARGB32, false);
             try
             {
-                snap.SetPixels32(croppedText.GetPixels32());
+                snap.SetPixels32(scanZoneTexture2D.GetPixels32());
               
-                var Result = barCodeReader.Decode(snap.GetRawTextureData(), croppedText.width, croppedText.height, RGBLuminanceSource.BitmapFormat.ARGB32);
+                var Result = barCodeReader.Decode(snap.GetRawTextureData(), scanZoneTexture2D.width, scanZoneTexture2D.height, RGBLuminanceSource.BitmapFormat.ARGB32);
                 
                 if (Result != null)
                 {
@@ -89,10 +90,10 @@ public class QRScanner : MonoBehaviour
     private void OnDisable()
     {
         QrCode = string.Empty;
-        if (croppedText != null)
+        if (scanZoneTexture2D != null)
         {
-            Destroy(croppedText);
-            croppedText = null;
+            Destroy(scanZoneTexture2D);
+            scanZoneTexture2D = null;
         }
         if (webcamTexture != null) webcamTexture.Stop();
         if (webCamTextureBackGround != null) webCamTextureBackGround.Stop();

@@ -17,8 +17,10 @@ public class MenuPairBase : ScriptableObject
 
     public void SpawnElements(Transform tabletCanvas, Transform monitorCanvas)
     {
-        SpawnedTablet ??= Instantiate(tabletObject, tabletCanvas);
-        SpawnedMonitor ??= Instantiate(monitorObject, monitorCanvas);
+        
+        SpawnedTablet ??= Instantiate(tabletObject, tabletCanvas,false);
+        SpawnedMonitor ??= Instantiate(monitorObject, monitorCanvas, false);
+        
     }
     
     public void SetMenuPairActive(bool state)
