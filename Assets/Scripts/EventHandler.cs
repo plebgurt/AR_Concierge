@@ -13,6 +13,11 @@ public class EventHandler : MonoBehaviour
         EventHandlerSingleton ??= this;
     }
 
+    internal void setupEH()
+    {
+        EventHandlerSingleton ??= this;
+    }
+
     public event Action<string> OnButtonPressedEvent;
 
     public void OnButtonPressed(string buttonName)

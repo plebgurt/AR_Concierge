@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "193.10.9.122:5555",
         "name": "com.DefaultCompany.UnityQRScanner",
-        "processId": 14386,
-        "exited": false
+        "processId": 23798,
+        "exited": true
     },
     "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
@@ -57,6 +57,12 @@
             "exited": false
         },
         {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 24532,
+            "exited": false
+        },
+        {
             "deviceId": "193.10.9.125:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
             "processId": 18003,
@@ -88,86 +94,32 @@
         },
         {
             "deviceId": "193.10.9.122:5555",
-            "name": "com.sec.android.app.launcher",
-            "processId": 2180,
-            "exited": false
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 1389,
+            "processId": 19550,
             "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 3069,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.unity3d.mobileremote",
-            "processId": 554,
+            "processId": 20406,
             "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 4930,
+            "processId": 22379,
             "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 6702,
+            "processId": 23037,
             "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 9384,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 10214,
-            "exited": false
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 10728,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 11351,
-            "exited": false
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 11876,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 12374,
-            "exited": false
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 12946,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 14386,
+            "processId": 23798,
             "exited": false
         }
     ],

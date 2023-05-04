@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -21,6 +22,7 @@ public class ProgramController : MonoBehaviour
     public Camera monitor;
     [SerializeField] internal PersonBase currentUser;
     public StateManager stateManager;
+    public EventHandler eventHandler;
     [SerializeField] private AudioClip loggedInSound;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Text loggedInText;
@@ -35,7 +37,7 @@ public class ProgramController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        //Screen.orientation = ScreenOrientation.LandscapeLeft;
         spawnedUsers = Instantiate(usersBase);
         instance ??= this;
         if (DebugUnity)
@@ -43,15 +45,20 @@ public class ProgramController : MonoBehaviour
             var random = new Random();
             var user = random.Next(4);
             currentUser = spawnedUsers.registeredUsers[user];
+            eventHandler.setupEH();
+            stateManager.SetupSM();
             return;
         }
-     
+        
+        Display.displays[0].Activate();
+        
         Display.onDisplaysUpdated += DisplayOnDisplaysUpdated;
+        Thread.Sleep(1000);
         if (Display.displays.Length <= 1 && !waitSecondMonitor) StartCoroutine(AwaitSecondMonitor());
         main.targetDisplay = 0;
         monitor.targetDisplay = 1;
-        
-
+        eventHandler.setupEH();
+        stateManager.SetupSM();
     }
 
     IEnumerator AwaitSecondMonitor()
@@ -116,47 +123,6 @@ public class ProgramController : MonoBehaviour
         return false;
     }
     
-    void Update()
-    {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-
-            // Check for 3D objects
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                Debug.Log("Touched 3D Object: " + hit.collider.gameObject.name);
-                return;
-            }
-
-            // Check for UI elements
-            GraphicRaycaster graphicRaycaster = GetComponentInParent<GraphicRaycaster>();
-            if (graphicRaycaster == null)
-            {
-                Debug.LogError("No GraphicRaycaster component found in the parent GameObject.");
-                return;
-            }
-
-            PointerEventData eventData = new PointerEventData(EventSystem.current);
-            eventData.position = Input.GetTouch(0).position;
-
-            // Raycast against all graphics in the canvas
-            List<RaycastResult> results = new List<RaycastResult>();
-            graphicRaycaster.Raycast(eventData, results);
-
-            // Find the first UI element that intersects with the ray
-            foreach (RaycastResult result in results)
-            {
-                if (result.gameObject != null)
-                {
-                    Debug.Log("Touched UI Element: " + result.gameObject.name);
-                    return;
-                }
-            }
-
-            Debug.Log("Touch detected, but no object or UI element found.");
-        }
-    }
+  
 
 }
