@@ -8,8 +8,9 @@ public class ButtonSpawner : MonoBehaviour
     [SerializeField] private List<Transform> buttonSpawnPoints;
     [SerializeField] private List<ButtonBase> buttonSO;
 
-    private void OnEnable()
+    private void Start()
     {
+        Canvas.ForceUpdateCanvases();
         var tempS = "";
         for (int i = 0; i < buttonSpawnPoints.Count; i++)
         {

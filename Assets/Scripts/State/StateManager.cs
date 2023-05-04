@@ -15,8 +15,7 @@ public class StateManager : MonoBehaviour
     internal LunchState lunchState = new LunchState();
     internal CheckedInState checkedInState = new CheckedInState();
     internal AktivitetState aktivitetState = new AktivitetState();
-    
-    internal List<BaseState> enterOrder = new List<BaseState>();
+
     internal List<BaseState> allBaseStates = new List<BaseState>();
     
     [SerializeField] internal Canvas tabletCanvas;
@@ -25,7 +24,14 @@ public class StateManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        
+        
+    }
+
+    internal void SetupSM()
+    {
         CurrentStateManager ??= this;
+        
         mainMenuState.MenuPairBase = Instantiate(menuPairBases[0]);
         qrState.MenuPairBase = Instantiate(menuPairBases[1]);
         schemaState.MenuPairBase = Instantiate(menuPairBases[2]);
@@ -43,6 +49,7 @@ public class StateManager : MonoBehaviour
 
         tabletCanvas.targetDisplay = 0;
         monitorCanvas.targetDisplay = 1;
+        
         tabletCanvas.worldCamera = ProgramController.instance.main;
         monitorCanvas.worldCamera = ProgramController.instance.monitor;
         
@@ -56,7 +63,7 @@ public class StateManager : MonoBehaviour
         currentState.ExitState(CurrentStateManager);
         currentState = newBaseState;
         newBaseState.EnterState(CurrentStateManager);
-        Canvas.ForceUpdateCanvases();
+        
         
     }
 
