@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8269461237918877477}
   - component: {fileID: 2727916141426825857}
+  - component: {fileID: 5491512514499239797}
   m_Layer: 5
   m_Name: Aktivitet_Tablet
   m_TagString: Untagged
@@ -55,9 +56,17 @@ MonoBehaviour:
   - {fileID: 4776304033072856417}
   - {fileID: 1192263112607061686}
   buttonSO:
+  - {fileID: 11400000, guid: bd71b7c29c94bf541a49df9cd1159398, type: 2}
+  - {fileID: 11400000, guid: 4fa652f049fe1054a845d3ec51e9db82, type: 2}
   - {fileID: 11400000, guid: f682a77957913664d9938cafc20ea92f, type: 2}
-  - {fileID: 11400000, guid: f682a77957913664d9938cafc20ea92f, type: 2}
-  - {fileID: 11400000, guid: f682a77957913664d9938cafc20ea92f, type: 2}
+--- !u!222 &5491512514499239797
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661997179455904116}
+  m_CullTransparentMesh: 1
 --- !u!1 &1390522954277122613
 GameObject:
   m_ObjectHideFlags: 0
