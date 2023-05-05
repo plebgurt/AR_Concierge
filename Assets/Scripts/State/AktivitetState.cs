@@ -15,7 +15,6 @@ public class AktivitetState : BaseState
 
     public override void HandleEvent(string eventName)
     {
-        Debug.Log(eventName);
         var trans = MenuPairBase.SpawnedMonitor.transform;
         var childC = trans.childCount;
         var found = false;
@@ -29,7 +28,7 @@ public class AktivitetState : BaseState
             }
         }
         if(found) return;
-        if(eventName.Equals("Back")) StateManager.CurrentStateManager.ChangeMenuState(StateManager.CurrentStateManager.mainMenuState);
+        if(eventName.Equals("Tillbaka")) StateManager.CurrentStateManager.ChangeMenuState(StateManager.CurrentStateManager.mainMenuState);
         
     }
 

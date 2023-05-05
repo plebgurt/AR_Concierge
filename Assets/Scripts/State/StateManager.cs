@@ -21,6 +21,8 @@ public class StateManager : MonoBehaviour
     [SerializeField] internal Canvas tabletCanvas;
     [SerializeField] internal Canvas monitorCanvas;
     
+    
+    
     // Start is called before the first frame update
     void Awake()
     {

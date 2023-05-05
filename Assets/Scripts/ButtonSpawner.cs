@@ -11,13 +11,10 @@ public class ButtonSpawner : MonoBehaviour
     private void Start()
     {
         Canvas.ForceUpdateCanvases();
-        var tempS = "";
         for (int i = 0; i < buttonSpawnPoints.Count; i++)
         {
             if(buttonSpawnPoints[i].transform.childCount > 0) continue;
             buttonSO[i].GenerateButton(buttonSpawnPoints[i]);
-            tempS += $"{buttonSO[i].buttonName}, pos {buttonSpawnPoints[i].position} \n";
         }
-        Debug.Log(tempS);
     }
 }

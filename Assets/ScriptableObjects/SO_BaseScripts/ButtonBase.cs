@@ -52,14 +52,11 @@ public class ButtonBase : ScriptableObject
                 break;
         }
         
-        Debug.Log($"Button name: {button.name}, button pos: {SpawnedButton.transform.TransformPoint(SpawnedButton.transform.position)}, ");
-        button.onClick.AddListener(SendPressedNameEvent); 
-        
+        button.onClick.AddListener(SendPressedNameEvent);
     }
     
     public void SendPressedNameEvent()
     {
-        Debug.LogWarning($"Sending: {buttonName} event.");
         EventHandler.EventHandlerSingleton.OnButtonPressed(buttonName);
     }
     
