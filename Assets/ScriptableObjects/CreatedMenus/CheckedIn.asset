@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0c144a6ddce464f93d5bd9b0cb653f, type: 3}
   m_Name: CheckedIn
   m_EditorClassIdentifier: 
-  menuName: CheckedIn
+  menuName: "P\xE5 plats"
   tabletObject: {fileID: 661997179455904116, guid: 42df5d02cecc88f4f84219ac4d054ca2,
     type: 3}
   monitorObject: {fileID: 661997179455904116, guid: f1f24ed7753e371479ca2cb2d951f594,

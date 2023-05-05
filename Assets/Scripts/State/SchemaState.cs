@@ -43,4 +43,9 @@ public class SchemaState : BaseState
     {
         return MenuPairBase.GetName();
     }
+    
+    public override void removeMenuPair()
+    {
+        MenuPairBase = null;
+    }
 }

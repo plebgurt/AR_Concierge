@@ -38,6 +38,14 @@ public class MenuPairBase : ScriptableObject
         
     }
 
+    public void DestoryMP()
+    {
+        Destroy(SpawnedTablet);
+        Destroy(SpawnedMonitor);
+        SpawnedTablet = null;
+        SpawnedMonitor = null;
+    }
+
     public string GetName()
     {
         return menuName;

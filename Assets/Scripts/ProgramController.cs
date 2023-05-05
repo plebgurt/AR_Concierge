@@ -100,12 +100,8 @@ public class ProgramController : MonoBehaviour
 
     public void ShutDown()
     {
+        
         Application.Quit();
-    }
-
-    public void LogOut()
-    {
-        stateManager.ChangeMenuState(stateManager.qrState);
     }
 
     public bool AttemptLogin(string scannedUser)
@@ -115,6 +111,7 @@ public class ProgramController : MonoBehaviour
         {
             if (!user.userid.Equals(userID)) continue;
             currentUser = user;
+            
             stateManager.ChangeMenuState(stateManager.mainMenuState);
             audioSource.PlayOneShot(loggedInSound);
             return true;

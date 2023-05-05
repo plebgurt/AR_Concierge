@@ -43,4 +43,9 @@ public class CheckedInState : BaseState
     {
         return MenuPairBase.GetName();
     }
+    
+    public override void removeMenuPair()
+    {
+        MenuPairBase = null;
+    }
 }

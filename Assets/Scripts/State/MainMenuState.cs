@@ -27,4 +27,9 @@ public class MainMenuState : BaseState
     {
         return MenuPairBase.name;
     }
+    
+    public override void removeMenuPair()
+    {
+        MenuPairBase = null;
+    }
 }

@@ -21,14 +21,6 @@ public class StateManager : MonoBehaviour
     [SerializeField] internal Canvas tabletCanvas;
     [SerializeField] internal Canvas monitorCanvas;
     
-    
-    
-    // Start is called before the first frame update
-    void Awake()
-    {
-        
-        
-    }
 
     internal void SetupSM()
     {
@@ -60,6 +52,20 @@ public class StateManager : MonoBehaviour
     }
 
 
+    void resetSM()
+    {
+        mainMenuState.MenuPairBase.DestoryMP();
+        qrState.MenuPairBase.DestoryMP();
+        schemaState.MenuPairBase.DestoryMP();
+        lunchState.MenuPairBase.DestoryMP();
+        checkedInState.MenuPairBase.DestoryMP();
+        aktivitetState.MenuPairBase.DestoryMP();
+        
+        currentState = qrState;
+        currentState.EnterState(CurrentStateManager);
+    }
+
+
     internal void ChangeMenuState(BaseState newBaseState)
     {
         currentState.ExitState(CurrentStateManager);
@@ -82,7 +88,8 @@ public class StateManager : MonoBehaviour
 
         if (eventName.Equals("Quit"))
         {
-            ChangeMenuState(qrState);
+            ProgramController.instance.currentUser = null;
+            resetSM();
         }
     }
 }

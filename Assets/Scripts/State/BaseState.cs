@@ -12,4 +12,6 @@ public abstract class BaseState
     public abstract void ExitState(StateManager stateManager);
     
     public abstract string GetNameMenuPair();
+
+    public abstract void removeMenuPair();
 }
