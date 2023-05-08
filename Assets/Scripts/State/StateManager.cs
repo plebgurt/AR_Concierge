@@ -86,7 +86,7 @@ public class StateManager : MonoBehaviour
             }
         }
 
-        if (eventName.Equals("Quit"))
+        if (eventName.Equals("Avsluta"))
         {
             ProgramController.instance.currentUser = null;
             resetSM();

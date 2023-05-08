@@ -1,10 +1,10 @@
 {
     "m_SelectedDeviceId": "193.10.9.122:5555",
     "m_SelectedPackage": {
-        "deviceId": "193.10.9.122:5555",
-        "name": "com.DefaultCompany.UnityQRScanner",
-        "processId": 27082,
-        "exited": true
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
+        "exited": false
     },
     "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
@@ -95,38 +95,8 @@
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 14640,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 15144,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 19597,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.sec.android.app.launcher",
-            "processId": 2140,
-            "exited": false
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
-            "processId": 24799,
-            "exited": true
-        },
-        {
-            "deviceId": "193.10.9.122:5555",
-            "name": "com.DefaultCompany.UnityQRScanner",
             "processId": 26492,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
@@ -138,13 +108,19 @@
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
             "processId": 26741,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "193.10.9.122:5555",
             "name": "com.DefaultCompany.UnityQRScanner",
             "processId": 27082,
             "exited": true
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.sec.android.app.launcher",
+            "processId": 2128,
+            "exited": false
         }
     ],
     "m_Tags": {

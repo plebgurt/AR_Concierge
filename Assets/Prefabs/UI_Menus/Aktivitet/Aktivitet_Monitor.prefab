@@ -301,7 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5312117912301018430}
   m_Layer: 0
-  m_Name: Disco
+  m_Name: Disko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -415,7 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1132425362409618049}
   m_Layer: 0
-  m_Name: Recycle
+  m_Name: "\xC5tervinna"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Du har valt disco!
+  m_text: Du har valt disko!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1279b4f9e31ce8949b2cca1a66fd3bfe, type: 2}
   m_sharedMaterial: {fileID: 4066978268636118133, guid: 1279b4f9e31ce8949b2cca1a66fd3bfe,

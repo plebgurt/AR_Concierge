@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c8bab66e58a37429f4c118e7f21a55, type: 3}
   m_Name: Quit
   m_EditorClassIdentifier: 
-  buttonName: Quit
+  buttonName: Avsluta
   imagePath: Button_exit
   buttonGO: {fileID: 6250112903617788812, guid: de23241f9c44a97429219ebc66aa1295,
     type: 3}
