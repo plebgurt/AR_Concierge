@@ -87,6 +87,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8269461237918877477}
   - component: {fileID: 4890817342432747820}
+  - component: {fileID: 4475771283944865285}
+  - component: {fileID: 7555862623985441833}
   m_Layer: 5
   m_Name: Schema_tablet
   m_TagString: Untagged
@@ -137,6 +139,44 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6a1983e2905816f4b9a170b655a5ba29, type: 2}
   - {fileID: 11400000, guid: 380ded01f4bb2ac4e8140f2d4cb6731f, type: 2}
   - {fileID: 11400000, guid: f682a77957913664d9938cafc20ea92f, type: 2}
+--- !u!223 &4475771283944865285
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661997179455904116}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &7555862623985441833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661997179455904116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &2877121200997133689
 GameObject:
   m_ObjectHideFlags: 0

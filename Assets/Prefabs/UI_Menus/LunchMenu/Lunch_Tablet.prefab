@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8269461237918877477}
   - component: {fileID: 7172548294412453757}
+  - component: {fileID: 7749077396217391719}
+  - component: {fileID: 2677285624292973413}
   m_Layer: 5
   m_Name: Lunch_Tablet
   m_TagString: Untagged
@@ -60,6 +62,44 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 74fc152606faa504d875fb0eb09e9de9, type: 2}
   - {fileID: 11400000, guid: 1a06b56c60543814b880111cfb1d1b38, type: 2}
   - {fileID: 11400000, guid: f682a77957913664d9938cafc20ea92f, type: 2}
+--- !u!223 &7749077396217391719
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661997179455904116}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &2677285624292973413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661997179455904116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &782824644050023539
 GameObject:
   m_ObjectHideFlags: 0
