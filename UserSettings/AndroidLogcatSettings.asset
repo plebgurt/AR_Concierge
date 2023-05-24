@@ -1,10 +1,10 @@
 {
     "m_SelectedDeviceId": "193.10.9.122:5555",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
-        "exited": false
+        "deviceId": "193.10.9.122:5555",
+        "name": "com.DefaultCompany.UnityQRScanner",
+        "processId": 20256,
+        "exited": true
     },
     "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
@@ -121,6 +121,12 @@
             "name": "com.sec.android.app.launcher",
             "processId": 2128,
             "exited": false
+        },
+        {
+            "deviceId": "193.10.9.122:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 20256,
+            "exited": true
         }
     ],
     "m_Tags": {
