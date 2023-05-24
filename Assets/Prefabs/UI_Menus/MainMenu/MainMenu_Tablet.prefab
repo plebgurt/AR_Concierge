@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 4242691194503796249}
   - component: {fileID: 4242691194503796260}
   m_Layer: 5
-  m_Name: AktivitetSpawn
+  m_Name: AktivitetsvalSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,10 +279,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonSpawnPoints:
-  - {fileID: 4242691194503796249}
-  - {fileID: 4242691194098942782}
   - {fileID: 4242691194528280444}
   - {fileID: 4242691194270674641}
+  - {fileID: 4242691194503796249}
+  - {fileID: 4242691194098942782}
   - {fileID: 4242691194075061406}
   buttonSO:
   - {fileID: 11400000, guid: 4b07ad18f7d7eba419da51afaeea8e28, type: 2}
