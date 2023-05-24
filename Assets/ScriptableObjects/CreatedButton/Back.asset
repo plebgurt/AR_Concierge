@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Back
   m_EditorClassIdentifier: 
   buttonName: Tillbaka
-  imagePath: Return
+  imagePath: Back
   buttonGO: {fileID: 6250112903617788812, guid: de23241f9c44a97429219ebc66aa1295,
     type: 3}
