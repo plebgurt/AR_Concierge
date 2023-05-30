@@ -220,7 +220,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 2560, y: 1600}
+  m_ReferenceResolution: {x: 1600, y: 2560}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -432,7 +432,7 @@ MonoBehaviour:
   loggedInText: {fileID: 0}
   monitorScreenText: {fileID: 1655065775}
   tabletScreenText: {fileID: 1880275399}
-  DebugUnity: 1
+  DebugUnity: 0
 --- !u!4 &542289395
 Transform:
   m_ObjectHideFlags: 0

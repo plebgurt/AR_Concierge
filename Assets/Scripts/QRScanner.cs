@@ -14,14 +14,15 @@ public class QRScanner : MonoBehaviour
     private RawImage scannerArea;
     [SerializeField] private RawImage backGround;
     private Texture2D scanZoneTexture2D;
-
+    //private Quaternion baseRotation;
 
     private void OnEnable()
     {
         //scannerArea = GetComponent<RawImage>();
         //scannerArea.transform.localScale = new Vector3(-1, 1, -1);
-        backGround.transform.localScale = new Vector3(-1, 1, -1);
-        webCamTextureBackGround = new WebCamTexture(WebCamTexture.devices[1].name, 2560, 1600);
+        //baseRotation = backGround.transform.rotation;
+        backGround.transform.localScale = new Vector3(1, -1, 1);
+        webCamTextureBackGround = new WebCamTexture(WebCamTexture.devices[1].name, 1600, 2560);
         backGround.texture = webCamTextureBackGround;
     }
 

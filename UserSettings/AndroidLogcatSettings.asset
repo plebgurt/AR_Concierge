@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "193.10.9.122:5555",
+    "m_SelectedDeviceId": "R52MA0M00TT",
     "m_SelectedPackage": {
-        "deviceId": "193.10.9.122:5555",
-        "name": "com.DefaultCompany.UnityQRScanner",
-        "processId": 27082,
+        "deviceId": "R52MA0M00TT",
+        "name": "com.DefaultCompany.UnityQRScanner2",
+        "processId": 4166,
         "exited": true
     },
     "m_SelectedPriority": 1,
@@ -61,6 +61,102 @@
             "name": "com.DefaultCompany.UnityQRScanner",
             "processId": 24532,
             "exited": false
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 24024,
+            "exited": true
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 24617,
+            "exited": true
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 25307,
+            "exited": false
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 26059,
+            "exited": true
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 26622,
+            "exited": true
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 27371,
+            "exited": true
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 28526,
+            "exited": false
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 29104,
+            "exited": false
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 29631,
+            "exited": false
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 30055,
+            "exited": false
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 31076,
+            "exited": false
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 31826,
+            "exited": true
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 32566,
+            "exited": true
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 2299,
+            "exited": false
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 3351,
+            "exited": true
+        },
+        {
+            "deviceId": "R52MA0M00TT",
+            "name": "com.DefaultCompany.UnityQRScanner2",
+            "processId": 4166,
+            "exited": true
         },
         {
             "deviceId": "193.10.9.125:5555",
@@ -145,6 +241,18 @@
             "name": "com.DefaultCompany.UnityQRScanner",
             "processId": 27082,
             "exited": true
+        },
+        {
+            "deviceId": "192.168.2.199:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 13771,
+            "exited": false
+        },
+        {
+            "deviceId": "192.168.2.199:5555",
+            "name": "com.DefaultCompany.UnityQRScanner",
+            "processId": 22145,
+            "exited": false
         }
     ],
     "m_Tags": {
